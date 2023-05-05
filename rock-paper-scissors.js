@@ -65,33 +65,29 @@ function startPlay(playerMove){
     computerMove === 'scissors' ? result = 'Tie' : null;
   }
 
-  if(result === 'You Win'){
-    score.wins += 1;
-  } else if( result === 'You Lose'){
-    score.losses += 1;
-  } else if(result === 'Tie'){
-    score.ties += 1;
-  }
+  result === 'You Win' ? score.wins += 1 :
+  result === 'You Lose' ? score.losses += 1 :
+  result === 'Tie' ? score.ties += 1: null;
 
-    buttonRock.disabled = 'true';
-    buttonRock.style.border = 'none';
-    buttonPaper.disabled = 'true';
-    buttonPaper.style.border = 'none';
-    buttonScissors.disabled = 'true';
-    buttonScissors.style.border = 'none';
+  buttonRock.disabled = 'true';
+  buttonRock.style.border = 'none';
+  buttonPaper.disabled = 'true';
+  buttonPaper.style.border = 'none';
+  buttonScissors.disabled = 'true';
+  buttonScissors.style.border = 'none';
 
-    comp.innerHTML = `COMP <img src="./images/${computerMove}_icon.png"         
-        class="pick""> vs  <img src="./images/${playerMove}_icon.png" class="pick"> YOU `;
-    output.innerHTML = result;
-    (localStorage.setItem('score', JSON.stringify(score)));
+  comp.innerHTML = `COMP <img src="./images/${computerMove}_icon.png"         
+      class="pick""> vs  <img src="./images/${playerMove}_icon.png" class="pick"> YOU `;
+  output.innerHTML = result;
 
+  localStorage.setItem('score', JSON.stringify(score)); 
+  
+  console.log(score)
+  scoreCardUpdate();
 
-    scoreCardUpdate();
-    console.log(score);
-
-    // setTimeout(()=>{
-    //   window.location.reload();
-    // }, 10000)
+  setTimeout(()=>{
+    window.location.reload();
+  }, 10000)
 }
 
 function scoreCardUpdate(){

@@ -165,3 +165,12 @@
     height: 60px;
     text-align: center;
   }
+  .option{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 15px;
+  }
+  .btn-group{
+    display: flex;
+    justify-content: center;
+  }

@@ -17,22 +17,22 @@
     <div class="container">
         <h2 class="rps-title">Rock-Paper-Scissors</h2>
         <div>
-          <button id='rock' class="btn">
-            <img src="./images/rock_icon.png">
-          </button>
-          <button id="paper" class="btn">
-            <img src="./images/paper_icon.png">
-          </button>
-          <button id="scissors" class="btn">
-            <img src="./images/scissors_icon.png">
-          </button>
+          <div class="option">
+            <button id='rock' class="btn">
+              <img src="./images/rock_icon.png">
+            </button>
+            <button id="paper" class="btn">
+              <img src="./images/paper_icon.png">
+            </button>
+            <button id="scissors" class="btn">
+              <img src="./images/scissors_icon.png">
+            </button>
+          </div>
 
           <div class="comment"> 
             <button class='play-again' onClick="window.location.reload()">
               Play Again!
             </button>
-
-            <!-- <hr> -->
 
             <span class="comp"></span>
             <span class="result"> </span>
@@ -41,9 +41,9 @@
               <h3 class="score">Score: </h3>
               <span id="score"></span>
             </div>
-            <button class='reset' id='reset' onClick="window.location.reload();">
-              RESET SCORE
-            </button>
+              <button class='reset' id='reset' onClick="window.location.reload();">
+                RESET SCORE
+              </button>
           </div>
         </div>
       </div>
