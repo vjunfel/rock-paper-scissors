@@ -63,12 +63,12 @@ function startPlay(playerMove){
     computerMove === 'rock' ? result = 'You Lose' : null;
     computerMove === 'paper' ? result = 'You Win': null;
     computerMove === 'scissors' ? result = 'Tie' : null;
-  } else {
-    result === 'You Win' ? score.wins += 1 :
-    result === 'You Lose' ? score.losses += 1 :
-    result === 'Tie' ? score.ties += 1: null;
   }
-
+  
+  result === 'You Win' ? score.wins += 1 :
+  result === 'You Lose' ? score.losses += 1 :
+  result === 'Tie' ? score.ties += 1: null;
+  
 
   buttonRock.disabled = 'true';
   buttonRock.style.border = 'none';
